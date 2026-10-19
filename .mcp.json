@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "artifact-publisher": {
+      "type": "http",
+      "url": "https://app.artifactpublisher.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ARTIFACT_PUBLISHER_KEY}"
+      }
+    }
+  }
+}

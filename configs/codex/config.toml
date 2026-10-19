@@ -1,0 +1,6 @@
+# Add to ~/.codex/config.toml (or a trusted project's .codex/config.toml).
+# Codex reads the key from the ARTIFACT_PUBLISHER_KEY environment variable
+# and sends it as "Authorization: Bearer <key>".
+[mcp_servers.artifact-publisher]
+url = "https://app.artifactpublisher.com/mcp"
+bearer_token_env_var = "ARTIFACT_PUBLISHER_KEY"

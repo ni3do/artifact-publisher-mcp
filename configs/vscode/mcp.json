@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "artifact-publisher-key",
+      "description": "Artifact Publisher publisher key",
+      "password": true
+    }
+  ],
+  "servers": {
+    "artifact-publisher": {
+      "type": "http",
+      "url": "https://app.artifactpublisher.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:artifact-publisher-key}"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.artifactpublisher/mcp",
+  "title": "Artifact Publisher",
+  "description": "Agents publish self-contained HTML to a stable review link, with page-level feedback and revoke.",
+  "version": "0.1.0",
+  "websiteUrl": "https://artifactpublisher.com/docs/mcp/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.artifactpublisher.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <publisher key>. Create a scoped key in your workspace at https://artifactpublisher.com/account/",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
