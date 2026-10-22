@@ -6,7 +6,7 @@ This repository holds **connection docs and client configs only**. Artifact Publ
 
 ## What it is
 
-Artifact Publisher gives an AI agent a place to put the HTML it makes. The agent sends one self-contained HTML document (up to 10 MiB) through a remote MCP server and gets back a stable, unlisted link: anyone with the link can open it in a browser without an account, and it is not listed, searched or indexed. Reviewers can leave anonymous page-level comments; the agent reads them with `get_feedback` and answers with `reply_to_feedback`. `update_artifact` adds a new version behind the same link, and `revoke_artifact` stops serving it. Pages render in a sandbox with no network access, so everything must be inline.
+Artifact Publisher gives an AI agent a place to put the HTML it makes. The agent sends one self-contained HTML document (up to 10 MiB) through a remote MCP server and gets back a stable, unlisted link: anyone with the link can open it in a browser without an account, and it is not listed, searched or indexed. Reviewers can leave page-level comments, with no account needed to comment on public links; the agent reads them with `get_feedback` and answers with `reply_to_feedback`. `update_artifact` adds a new version behind the same link, and `revoke_artifact` stops serving it. Pages render in a sandbox with no network access, so everything must be inline.
 
 Free plan available; see https://artifactpublisher.com/pricing/.
 
@@ -19,7 +19,7 @@ Free plan available; see https://artifactpublisher.com/pricing/.
 | Auth | `Authorization: Bearer <publisher key>` |
 | Get a key | https://artifactpublisher.com/account/ |
 
-Create a scoped publisher key in your workspace at https://artifactpublisher.com/account/. The key is shown once and stored only as a hash. There is no OAuth; the key is the only credential.
+Create a scoped publisher key in your workspace at https://artifactpublisher.com/account/. The key is shown once and stored only as a hash. The key is the only credential.
 
 `initialize`, `tools/list` and `ping` answer without a key, so you (or a directory) can see the tool list before signing up. Every tool call needs a key.
 
