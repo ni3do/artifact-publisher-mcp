@@ -19,9 +19,9 @@ Free plan available; see https://artifactpublisher.com/pricing/.
 | Auth | `Authorization: Bearer <publisher key>` |
 | Get a key | https://artifactpublisher.com/account/ |
 
-Create a scoped publisher key in your workspace at https://artifactpublisher.com/account/. The key is shown once and stored only as a hash. The key is the only credential.
+Create a scoped publisher key in your workspace at https://artifactpublisher.com/account/. The key is shown once and stored only as a hash.
 
-`initialize`, `tools/list` and `ping` answer without a key, so you (or a directory) can see the tool list before signing up. Every tool call needs a key.
+`initialize`, `tools/list` and `ping` answer without a key, so you (or a directory) can see the tool list before signing up. Tool calls need authorization; with a publisher key, send `Authorization: Bearer <publisher key>`.
 
 **Keep the key out of prompts, repositories and artifacts.** Every config in this repo reads it from an environment variable or a client prompt. Set it in your shell profile, for example:
 
